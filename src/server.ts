@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 3000
 const start = async (): Promise<void> => {
   await payload.init({
     secret: process.env.PAYLOAD_SECRET || '',
-    disableDBConnect: process.env.PAYLOAD_DISABLE_DB_CONNECT === 'true',
+    disableDBConnect: process.env.DISABLE_DB_CONNECT === 'true',
     express: app,
     onInit: () => {
       payload.logger.info(`Payload Admin URL: ${payload.getAdminURL()}`)
